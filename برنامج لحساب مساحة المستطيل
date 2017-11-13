@@ -1,0 +1,32 @@
+//E2.1 from Big Java book.
+/* Write an AreaTester program that constructs a
+Rectangle object and then computes
+and prints its area. Use the getWidth and
+getHeight methods. Also print the expected
+answer. */
+
+
+package areatester; 
+
+import java.awt.Rectangle;// هنا نضع ال import الخاصة في Rectangle 
+
+
+public class AreaTester { // نعرف كلاس من نوع public اسمه AreaTester
+
+   
+    public static void main(String[] args) { // هنا في داخل المين يتم تنفيذ ما يلي : 
+    
+        double area,width,height;// أولا : هنا نعرف المتغير area والمتغير width والمتغير height من نوع double 
+        
+        Rectangle rectangle = new Rectangle (10,20,50,40);/* ثانياً : نعمل أوبجيكت اسمه rectangle من الكلاس Rectangle وندخل بداخله القيم
+         x=10 , y=20 , width=50, height=40 */ 
+         
+         width = rectangle.getWidth();// هنا نقول له رجعلي العرض وهو .getWidth
+       height = rectangle.getHeight();// وهنا نقول له رجعلي الارتفاع وهو .getHeight
+       area = width * height;// هنا نقول له احسب لي المساحة 
+       
+       System.out.println("The area of rectangle is :"+area);// هنا نقول له اطبع لي قيمة المساحة 
+       System.out.println("The expected area is 2000.0.");// هنا نقول له اطبعلي القيمة المتوقعة 
+    }
+    
+}
